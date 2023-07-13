@@ -2,6 +2,7 @@ import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { GraphQLModule } from '@nestjs/graphql';
 import { join } from 'path';
+import { TaskModule } from './task/task.module';
 
 @Module({
   imports: [
@@ -14,6 +15,7 @@ import { join } from 'path';
         fieldMiddleware: [],
       },
     }),
+    TaskModule,
   ],
 })
 export class AppModule {}
