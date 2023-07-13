@@ -7,6 +7,8 @@ import { TaskModule } from './task/task.module';
 @Module({
   imports: [
     GraphQLModule.forRoot({
+      driver: ApolloDriver,
+
       autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
       cors: {
         origin: '*',
